@@ -76,6 +76,7 @@ int str_comp(char **arr, int size)
 
 	return (-1);
 }
+
 /**
  * str_concat - concatenates two strings
  * The returned pointer points to a newly allocated space in memory
