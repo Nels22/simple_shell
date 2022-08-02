@@ -55,7 +55,7 @@ void set_env(char *name, char *value, data_shell *datash)
 }
 
 /**
- * _setenv - compares env variable names with the name passed
+ * _set_env - compares env variable names with the name passed
  * @name: name of the environment variable
  * @value: value of the environment variable
  * @datash: data structure (environ)
