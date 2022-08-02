@@ -55,7 +55,7 @@ char *_getenv(const char *name, char **_environ)
 /**
  * _env - prints the environment variables.
  *
- * @datash - relevant data
+ * @datash: relevant data
  * Return: 1 on success.
  */
 int _env(data_shell *datash)
