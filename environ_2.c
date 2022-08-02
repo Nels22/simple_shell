@@ -61,7 +61,7 @@ void set_env(char *name, char *value, data_shell *datash)
  * @datash: data structure (environ)
  * Return: no return
  */
-void set_env(char *name, char *value, data_shell *datash)
+void _set_env(char *name, char *value, data_shell *datash)
 {
 	int i;
 	char *var_env, *name_env;
