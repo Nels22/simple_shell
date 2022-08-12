@@ -13,7 +13,7 @@ void cd_dot(data_shell *datash)
 
 	getcwd(pwd, sizeof(pwd));
 	cp_pwd = _strdup(pwd);
-	set_env("OLDPWD". cp_pwd, datash);
+	set_env("OLDPWD", cp_pwd, datash);
 	dir = datash->args[1];
 	if (_strcmp(".", dir) == 0)
 	{
@@ -60,7 +60,7 @@ void cd_to(data_shell *datash)
 	char pwd[PATH_MAX];
 	char *dir, *cp_pwd, *cp_dir;
 
-	getcmd(pwd, sizeof(pwd));
+	getcwd(pwd, sizeof(pwd));
 
 	dir = datash->args[1];
 	if (chdir(dir) == -1)
@@ -80,7 +80,7 @@ void cd_to(data_shell *datash)
 
 	datash->status = 0;
 
-	chdir(ddir);
+	chdir(dir);
 }
 
 /**
@@ -122,7 +122,7 @@ void cd_previous(data_shell *datash)
 
 	datash->status = 0;
 
-	chdirr(p_pwd);
+	chdir(p_pwd);
 }
 
 /**
@@ -155,7 +155,7 @@ void cd_to_home(data_shell *datash)
 		return;
 	}
 
-	set_en("OLDPWD", p_pwd, datash);
+	set_env("OLDPWD", p_pwd, datash);
 	set_env("PWD", home, datash);
 	free(p_pwd);
 	datash->status = 0;
