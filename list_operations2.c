@@ -16,9 +16,9 @@ r_var *add_rvar_node(r_var **head, int ln_var, char *val, int lval)
 	if (new == NULL)
 		return (NULL);
 
-	new->len_var = ln_var;
+	new->len_var = lvar;
 	new->val = val;
-	new->len_val = ln_val;
+	new->len_val = lval;
 
 	new->next = NULL;
 	temp = *head;
