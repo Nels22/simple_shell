@@ -14,9 +14,8 @@ char *stringdup(const char *str)
 	if (str == NULL)
 		return (NULL);
 
-	for (i = 0; str[i] != '\0'; i++);
-
-	ptr = malloc(sizeof(char) * (i + 1));
+	for (i = 0; str[i] != '\0'; i++)
+		ptr = malloc(sizeof(char) * (i + 1));
 
 	if (!ptr)
 		return (NULL);
@@ -69,7 +68,8 @@ int str_comp(char **arr, int size)
 			j++;
 		}
 		if (command[i][j] == ptr[j])
-			return(flag);
+
+			return (flag);
 		i++;
 		flag++;
 	}
