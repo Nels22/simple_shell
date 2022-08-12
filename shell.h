@@ -108,7 +108,7 @@ char *_strcat(char *dest, const char *src);
 char *_strcpy(char *dest, char *src);
 int _strcmp(char *s1, char *s2);
 char *_strchr(char *s, char c);
-nt _strspn(char *s, char *accept);
+int _strspn(char *s, char *accept);
 
 /* memory_manager.c */
 void _memcpy(void *newptr, const void *ptr, unsigned int size);
